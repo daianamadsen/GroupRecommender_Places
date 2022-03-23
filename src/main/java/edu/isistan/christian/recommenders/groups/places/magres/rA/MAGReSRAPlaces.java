@@ -62,6 +62,11 @@ public abstract class MAGReSRAPlaces extends MAGReSRA<PlaceItem> {
 	}
 	
 	@Override
+	protected List<UserAg<PlaceItem>> createAgents(GRecGroup group, HashMap<SURUser, PUMASAgentProfile<PlaceItem>> userAgProfiles, HashMap<SURUser, Double> assertivenessFactors, HashMap<SURUser, Double> cooperativenessFactors, HashMap<SURUser, HashMap<SURUser, Double>> relationshipsFactors) {
+		return createAgents(group, userAgProfiles);
+	}
+	
+	@Override
 	public String toString() {
 		return "PUMASGRecMovies [singleUserRecommender="
 				+ singleUserRecommender + ", groupRatingEstimationStrategy="
